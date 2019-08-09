@@ -1,27 +1,181 @@
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: #fff;
   font-family: Helvetica, Arial, sans-serif;
-  color:#000;
+  color: #000;
   line-height: 1.4;
   margin: 0;
-
 }
-nav a{
-  color:#000;
+
+nav a {
+  color: #000;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
 }
-#navi{
-list-style-type: none;
-padding: 0;
-margin: 0;
+
+#navi ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
+
 /* Das ist ein Kommentar */
- #pageheader{
-   background-color: #fff;
- }
+#pageheader {
+  background-color: #fff;
+  height: 60px;
+}
+
+#burgerbutton {
+  background-color: transparent;
+  border: none;
+}
+
+#navi {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#navi.show {
+  display: block;
+}
+
+#intro {
+  background-image: url(img/intro.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: #fff;
+  border: 1px solid #374A67;
+  border-radius: 4px;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #374A67;
+
+  transition: all 0.2s linear;
+  display: inline-block;
+}
+
+.button:hover {
+  color: #fff;
+  background: #374A67;
+}
+
+/* ab hier war ich für hover nicht mehr da */
+.button-blue {
+  color: #fff;
+  background: #374A67;
+}
+
+.button-blue:hover {
+  background: white;
+  color: #374A67;
+}
+
+.card {
+  background-color: #fff;
+  border-style: 1px solid #828282;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.card p {
+  color: #828282;
+}
+
+.card img {
+  width: 100%;
+}
+
+#rezepte {
+  text-align: center;
+}
+
+@media (min-width: 960px) {
+  #burgerbutton {
+    display: none;
+  }
+
+  #navi {
+    display: block;
+  }
+
+  #navi ul {
+    display: flex;
+  }
+
+  #navi ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .card {
+    float: left;
+    width: calc(33% - 16px);
+    margin: 8px;
+  }
+
+  .row::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .wrapper {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+main .wrapper {
+  display: block;
+}
+
+.newsletter {
+  background-color: #374A67;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+
+}
+
+#newslettertext {
+  color: white;
+  padding: 20px;
+  line-height: 25px;
+  font-size: 20px;
+}
+
+.newsletter p{
+  font-weight: bold;
+}
+
+.newsletter input {
+  padding: 15px;
+  border-radius: 4px;
+  border: none;
+}
